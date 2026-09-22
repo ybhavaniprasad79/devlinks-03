@@ -24,7 +24,7 @@ export default function App() {
   // BUG (issue #3): the new index is never checked against the current one, so the same
   // quote can appear twice in a row (feels broken to users).
   function next() {
-    const i = Math.round(Math.random() * QUOTES.length)
+    let i = Math.round(Math.random() * QUOTES.length)
     
     while (i === index) { i = Math.floor(Math.random() * QUOTES.length) }
     
