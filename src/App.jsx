@@ -25,6 +25,9 @@ export default function App() {
   // quote can appear twice in a row (feels broken to users).
   function next() {
     const i = Math.round(Math.random() * QUOTES.length)
+    
+    while (i === index) { i = Math.floor(Math.random() * QUOTES.length) }
+    
     setIndex(i)
   }
 
